@@ -1,0 +1,16 @@
+<div class="container container-fluid">
+    <h2>Inbuilt Directives: Assignment 2</h2><br>
+        <table class="table table-bordered"> 
+            <thead>
+                <tr [ngClass]="{classTableHead:true}"> <!-- Assign an attribute directive ngClass to the table head --> 
+                <th>Name</th><!--Display the name -->
+                </tr>
+            </thead>
+            <tbody [ngClass]="{classTableBody:true}">
+                <tr  *ngFor="let cartoon of cartoons" > <!-- Loop through the array of cartoons and display each value as table row. Assign an attribute directive ngClass to the table body -->  
+                <td (click)="updateID(cartoon.id)" [style.background-color]="getStyle(cartoon.id)">{{cartoon.name}}</td> <!-- On click of the name trigger the function update ID and getStyle-->
+                </tr>
+            </tbody>       
+        </table>
+        <show-details [childID]="parentID"></show-details><!-- Pass ID of the selected row to child component -->
+</div>

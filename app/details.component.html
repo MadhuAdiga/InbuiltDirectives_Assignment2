@@ -1,0 +1,9 @@
+<table class="table table-bordered"><!-- Loop through the array of cartoons and display each value as table row. Assign an attribute directive ngClass to the table body -->  
+<tbody *ngFor="let cartoon of cartoons" [ngClass]="{classTableBody:true}">
+    <tr *ngIf="cartoon.id==childID" > <!-- Display details only if the selected row ID is equal to input ID-->
+        <td><b>Name: </b>{{cartoon.name}}</td>
+        <td><b>Date of Birth: </b>{{cartoon.DOB}}</td>
+        <td><b>Email: </b>{{cartoon.email}}</td>
+    </tr>
+</tbody>
+</table>
