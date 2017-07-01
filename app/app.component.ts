@@ -23,7 +23,7 @@ export class AppComponent implements OnInit { // Export a class AppComponent
         }
         getStyle(ID:number){
             if (ID%2==0) { return '#deff80'}
-            else { return '#c1d2ae'};
+            else { return 'peach'};
         }
         constructor(private _appServives : AppServices){} //Declare a private variable of the type AppServices
         

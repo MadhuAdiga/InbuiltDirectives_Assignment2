@@ -24,7 +24,7 @@ var AppComponent = (function () {
             return '#deff80';
         }
         else {
-            return '#c1d2ae';
+            return 'peach';
         }
         ;
     };
